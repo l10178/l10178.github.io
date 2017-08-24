@@ -1,37 +1,23 @@
-## Welcome to GitHub Pages
+This is the source of  [l10178.github.io](https://l10178.github.io/).
+=======
 
-You can use the [editor on GitHub](https://github.com/l10178/l10178.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This Web site is rendered with GitHub pages.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+To run this locally
 
-### Markdown
+* [Fork this](https://github.com/jhipster/jhipster.github.io/fork) repo and clone to your file system
+* [Install Jekyll](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)
+* Run `bundle install` if you are running it for the first time.
+** If you install it into a vendor directory, do not forget to add that directory in the exclusions into _config.yml!
+* Run `bundle exec jekyll serve` in the cloned repo folder
+* you will be able to access the site at http://localhost:4000
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Or with Docker (recommended way on Windows)
+* [Fork this](https://github.com/jhipster/jhipster.github.io/fork) repo and clone to your file system
+* `docker container run --rm --label=jekyll --volume=$(pwd):/srv/jekyll -it -p 4000:4000 jekyll/jekyll:pages bundle exec jekyll serve`
+* or on Windows: `docker container run --rm --label=jekyll --volume=%CD%:/srv/jekyll -it -p 4000:4000 jekyll/jekyll:pages bundle exec jekyll serve`
+* you will be able to access the site at http://localhost:4000
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/l10178/l10178.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+=======
+# Thanks
+https://github.com/jhipster/jhipster.github.io
