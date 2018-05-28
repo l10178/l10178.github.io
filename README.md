@@ -1,22 +1,16 @@
 This is the source of  [l10178.github.io](https://l10178.github.io/).
 =======
+This is a Vue.js project. All source `grape-skins` is copied from [grapes](https://github.com/l10178/grapes) vue.js branch.
 
-This Web site is rendered with GitHub pages.
 To run this locally
 
 * [Fork this](https://github.com/l10178/l10178.github.io/fork) repo and clone to your file system
-* [Install Jekyll](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)
-* Run `bundle install` if you are running it for the first time.
-** If you install it into a vendor directory, do not forget to add that directory in the exclusions into _config.yml!
-* Run `bundle exec jekyll serve` in the cloned repo folder
-* you will be able to access the site at http://localhost:4000
+* cd grape-skins && yarn && yarn start
+* you will be able to access the site at http://localhost:9000
 
-Or with Docker (recommended way on Windows)
-* [Fork this](https://github.com/l10178/l10178.github.io/fork) repo and clone to your file system
-* `docker container run --rm --label=jekyll --volume=$(pwd):/srv/jekyll -it -p 4000:4000 jekyll/jekyll:pages bundle exec jekyll serve`
-* or on Windows: `docker container run --rm --label=jekyll --volume=%CD%:/srv/jekyll -it -p 4000:4000 jekyll/jekyll:pages bundle exec jekyll serve`
-* you will be able to access the site at http://localhost:4000
+Assuming you have already installed Java, Git, Node.js,and Yarn.
 
-=======
-# Thanks
-https://github.com/jhipster/jhipster.github.io
+
+# update site
+grape-skins is the front-end source. `static` and `index.html` is released for the github.io.
+run release.sh and then commit all to GitHub, and then wait a moment, the site will be updated.
