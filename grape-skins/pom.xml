@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>grape-skins</artifactId>
+
+    <parent>
+        <groupId>com.nxest.grapes</groupId>
+        <artifactId>grapes</artifactId>
+        <version>0.0.1</version>
+        <relativePath>../</relativePath>
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <frontend-maven-plugin.version>1.6</frontend-maven-plugin.version>
+        <node.version>v10.2.1</node.version>
+        <yarn.version>v1.7.0</yarn.version>
+        <maven.test.skip>false</maven.test.skip>
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <!--we do not need a jar-->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                    <skipIfEmpty>true</skipIfEmpty>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.github.eirslett</groupId>
+                <artifactId>frontend-maven-plugin</artifactId>
+                <version>${frontend-maven-plugin.version}</version>
+                <executions>
+                    <!-- Install our node and yarn version to run yarn/node scripts-->
+                    <execution>
+                        <id>install node and yarn</id>
+                        <goals>
+                            <goal>install-node-and-yarn</goal>
+                        </goals>
+                        <configuration>
+                            <nodeVersion>${node.version}</nodeVersion>
+                            <yarnVersion>${yarn.version}</yarnVersion>
+                            <nodeDownloadRoot>https://npm.taobao.org/mirrors/node/</nodeDownloadRoot>
+                            <yarnDownloadRoot>https://npm.taobao.org/mirrors/yarn/</yarnDownloadRoot>
+                        </configuration>
+                    </execution>
+                    <!-- Install all project dependencies -->
+                    <execution>
+                        <id>yarn install</id>
+                        <goals>
+                            <goal>yarn</goal>
+                        </goals>
+                        <!-- optional: default phase is "generate-resources" -->
+                        <phase>generate-resources</phase>
+                        <!-- Optional configuration which provides for running any npm command -->
+                        <configuration>
+                            <arguments>install</arguments>
+                        </configuration>
+                    </execution>
+                    <!-- run tests -->
+                    <execution>
+                        <id>yarn run test</id>
+                        <goals>
+                            <goal>yarn</goal>
+                        </goals>
+                        <configuration>
+                            <arguments>run test</arguments>
+                            <skip>${maven.test.skip}</skip>
+                        </configuration>
+                    </execution>
+                    <!-- Build and minify static files -->
+                    <execution>
+                        <id>yarn run build</id>
+                        <goals>
+                            <goal>yarn</goal>
+                        </goals>
+                        <configuration>
+                            <arguments>run build</arguments>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
