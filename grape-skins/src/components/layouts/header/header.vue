@@ -1,74 +1,84 @@
 <template>
     <div>
-        <div class="navbar">
-            <div class="navbar-brand">
-                <a href="/">
+        <div class="navbar navbar-expand-md" role="navigation">
+            <div class="navbar-header nav-title ">
+                <a class="navbar-brand" href="/">
                     <img src="../../../assets/images/logo/logo.png" class="img-brand"/>
                 </a>
                 Grapes
+                <button class="navbar-toggler" type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseBar"
+                        aria-controls="collapseBar"
+                        aria-expanded="true"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
-            <el-menu
-                default-active="-100"
-                mode="horizontal"
-                background-color="#1c2b36"
-                text-color="#c6cfd6"
-                active-text-color="#fff">
+            <div class="collapse navbar-collapse justify-content-end" id="collapseBar">
+                <el-menu
+                    default-active="-100"
+                    mode="horizontal"
+                    background-color="#1c2b36"
+                    text-color="#c6cfd6"
+                    active-text-color="#fff">
 
-                <el-menu-item index="-1">
-                    <router-link to="/home">
-                        <fa-icon :icon="['fas','home']" size="lg"/>
-                        Home
-                    </router-link>
-                </el-menu-item>
-                <el-menu-item index="1">
-                    <router-link to="/blog">
-                        <fa-icon :icon="['fas','rss']" size="lg"/>
-                        Blog
-                    </router-link>
-                </el-menu-item>
-                <el-submenu index="0">
-                    <template slot="title">
-                        <fa-icon icon="user-plus" size="lg"/>
-                        Administration
-                    </template>
-                    <el-menu-item index="">
-                        Health
+                    <el-menu-item index="-1">
+                        <router-link to="/home">
+                            <fa-icon :icon="['fas','home']" size="lg"/>
+                            Home
+                        </router-link>
                     </el-menu-item>
-                </el-submenu>
+                    <el-menu-item index="1">
+                        <router-link to="/blog">
+                            <fa-icon :icon="['fas','rss']" size="lg"/>
+                            Blog
+                        </router-link>
+                    </el-menu-item>
+                    <el-submenu index="0">
+                        <template slot="title">
+                            <fa-icon icon="user-plus" size="lg"/>
+                            Administration
+                        </template>
+                        <el-menu-item index="">
+                            Health
+                        </el-menu-item>
+                    </el-submenu>
 
-                <el-submenu index="3">
-                    <template slot="title">
-                        <fa-icon icon="user-circle" size="lg"/>
-                        Account
-                    </template>
-                    <el-menu-item index="3-1">
-                        <el-button type="text" @click="loginFormVisible = true">Sign In</el-button>
-                    </el-menu-item>
-                    <el-menu-item index="3-2">
-                        <el-button type="text">Sign Out</el-button>
-                    </el-menu-item>
-                    <el-menu-item index="3-3">
-                        <el-button type="text">Profile</el-button>
-                    </el-menu-item>
-                    <el-menu-item index="3-4">
-                        <el-button type="text">Register</el-button>
-                    </el-menu-item>
-                </el-submenu>
-                <el-submenu index="i-github">
-                    <template slot="title">
-                        <fa-icon :icon="['fab','github']" size="2x"/>
-                    </template>
-                    <el-menu-item v-for="repository in repositories" :key="repository.id" :index="repository.name">
-                        <!--suppress JSUnresolvedVariable -->
-                        <a :href="repository.html_url" target="_blank"
-                           :title="repository.description">
-                            {{repository.name}}
-                        </a>
-                    </el-menu-item>
-                </el-submenu>
+                    <el-submenu index="3">
+                        <template slot="title">
+                            <fa-icon icon="user-circle" size="lg"/>
+                            Account
+                        </template>
+                        <el-menu-item index="3-1">
+                            <el-button type="text" @click="loginFormVisible = true">Sign In</el-button>
+                        </el-menu-item>
+                        <el-menu-item index="3-2">
+                            <el-button type="text">Sign Out</el-button>
+                        </el-menu-item>
+                        <el-menu-item index="3-3">
+                            <el-button type="text">Profile</el-button>
+                        </el-menu-item>
+                        <el-menu-item index="3-4">
+                            <el-button type="text">Register</el-button>
+                        </el-menu-item>
+                    </el-submenu>
+                    <el-submenu index="i-github">
+                        <template slot="title">
+                            <fa-icon :icon="['fab','github']" size="2x"/>
+                        </template>
+                        <el-menu-item v-for="repository in repositories" :key="repository.id" :index="repository.name">
+                            <!--suppress JSUnresolvedVariable -->
+                            <a class="text-light"
+                               :href="repository.html_url" target="_blank"
+                               :title="repository.description">
+                                {{repository.name}}
+                            </a>
+                        </el-menu-item>
+                    </el-submenu>
+                </el-menu>
 
-
-            </el-menu>
+            </div>
         </div>
 
 

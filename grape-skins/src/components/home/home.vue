@@ -86,7 +86,7 @@
                     </div>
                     <p class="lead">
                         Grapes is a
-                        <a class="dark" href="http://projects.spring.io/spring-boot/" target="_blank">Spring Boot</a> +
+                        <a class="dark" href="https://spring.io/projects/spring-boot" target="_blank">Spring Boot</a> +
                         <a class="dark" href="https://cn.vuejs.org/" target="_blank">Vue.js</a> Web application.
                         <br>
                     </p>

@@ -13,7 +13,8 @@ import regular from '@fortawesome/fontawesome-free-regular';
 import brands from '@fortawesome/fontawesome-free-brands';
 import FontAwesomeIcon from '@fortawesome/vue-fontawesome';
 
-import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min';
 import Storage from 'vue-ls';
 import app from './app';
 import router from './router';
