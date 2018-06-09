@@ -13,9 +13,7 @@ import regular from '@fortawesome/fontawesome-free-regular';
 import brands from '@fortawesome/fontawesome-free-brands';
 import FontAwesomeIcon from '@fortawesome/vue-fontawesome';
 
-import BootstrapVue from 'bootstrap-vue';
 import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap-vue/dist/bootstrap-vue.css';
 import Storage from 'vue-ls';
 import app from './app';
 import router from './router';
@@ -23,7 +21,6 @@ import '@/assets/styles/index.scss';
 
 Vue.use(VueLodash, {name: 'lodash'});
 Vue.use(ElementUI);
-Vue.use(BootstrapVue);
 
 fontawesome.library.add(solid, regular, brands);
 Vue.component('fa-icon', FontAwesomeIcon);

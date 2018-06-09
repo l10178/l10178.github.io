@@ -1,51 +1,75 @@
 <template>
     <div>
-        <b-navbar toggleable="md" type="dark" variant="dark">
-
-            <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-
-            <b-navbar-brand href="/">
-                <img src="../../../assets/images/logo/logo.png" class="img-brand"/>
+        <div class="navbar">
+            <div class="navbar-brand">
+                <a href="/">
+                    <img src="../../../assets/images/logo/logo.png" class="img-brand"/>
+                </a>
                 Grapes
-            </b-navbar-brand>
+            </div>
+            <el-menu
+                default-active="-100"
+                mode="horizontal"
+                background-color="#1c2b36"
+                text-color="#c6cfd6"
+                active-text-color="#fff">
 
-            <b-collapse is-nav id="nav_collapse">
-                <!-- Right aligned nav items -->
-                <b-navbar-nav class="ml-auto">
-                    <b-nav-item href="#" right>
-                        <router-link to="/blog">
-                            <fa-icon :icon="['fab','pied-piper-alt']" size="2x"/>
-                        </router-link>
-                    </b-nav-item>
-                    <b-nav-item-dropdown right>
-                        <template slot="button-content">
-                            <fa-icon :icon="['fab','github']" size="2x"/>
-                        </template>
-                        <b-dropdown-item href="https://github.com/l10178/grapes" target="_blank">grapes
-                        </b-dropdown-item>
-                        <b-dropdown-item href="https://github.com/l10178/bits-pieces" target="_blank">bits-pieces
-                        </b-dropdown-item>
-                        <b-dropdown-item href="https://github.com/l10178/angular-pretty-size"
-                                         target="_blank">angular-pretty-size
-                        </b-dropdown-item>
-                    </b-nav-item-dropdown>
+                <el-menu-item index="-1">
+                    <router-link to="/home">
+                        <fa-icon :icon="['fas','home']" size="lg"/>
+                        Home
+                    </router-link>
+                </el-menu-item>
+                <el-menu-item index="1">
+                    <router-link to="/blog">
+                        <fa-icon :icon="['fas','rss']" size="lg"/>
+                        Blog
+                    </router-link>
+                </el-menu-item>
+                <el-submenu index="0">
+                    <template slot="title">
+                        <fa-icon icon="user-plus" size="lg"/>
+                        Administration
+                    </template>
+                    <el-menu-item index="">
+                        Health
+                    </el-menu-item>
+                </el-submenu>
 
-                    <b-nav-item-dropdown right>
-                        <template slot="button-content">
-                            <fa-icon icon="user" size="2x"/>
-                        </template>
-                        <b-dropdown-item href="#">Profile</b-dropdown-item>
-                        <b-dropdown-item href="#">Register</b-dropdown-item>
+                <el-submenu index="3">
+                    <template slot="title">
+                        <fa-icon icon="user-circle" size="lg"/>
+                        Account
+                    </template>
+                    <el-menu-item index="3-1">
+                        <el-button type="text" @click="loginFormVisible = true">Sign In</el-button>
+                    </el-menu-item>
+                    <el-menu-item index="3-2">
+                        <el-button type="text">Sign Out</el-button>
+                    </el-menu-item>
+                    <el-menu-item index="3-3">
+                        <el-button type="text">Profile</el-button>
+                    </el-menu-item>
+                    <el-menu-item index="3-4">
+                        <el-button type="text">Register</el-button>
+                    </el-menu-item>
+                </el-submenu>
+                <el-submenu index="i-github">
+                    <template slot="title">
+                        <fa-icon :icon="['fab','github']" size="2x"/>
+                    </template>
+                    <el-menu-item v-for="repository in repositories" :key="repository.id" :index="repository.name">
+                        <!--suppress JSUnresolvedVariable -->
+                        <a :href="repository.html_url" target="_blank"
+                           :title="repository.description">
+                            {{repository.name}}
+                        </a>
+                    </el-menu-item>
+                </el-submenu>
 
-                        <b-dropdown-item href="#" @click="loginFormVisible = true">
-                            <el-button type="text">Sign In</el-button>
-                        </b-dropdown-item>
-                        <b-dropdown-item href="#">Sign Out</b-dropdown-item>
-                    </b-nav-item-dropdown>
-                </b-navbar-nav>
 
-            </b-collapse>
-        </b-navbar>
+            </el-menu>
+        </div>
 
 
         <el-dialog title="Sign In" :visible.sync="loginFormVisible">
@@ -67,13 +91,19 @@
 
 <script>
     import Vue from 'vue';
+    import GitHub from 'github-api';
+    import {GITHUB_API_TKKEEN, GITHUB_USER} from '../../../constants';
 
+    let github = new GitHub({
+        username: GITHUB_API_TKKEEN.replace('2018', '1201'),
+    });
     const loginUrl = '/api/authenticate';
     export default {
         name: 'GrpHeader',
         data() {
             return {
                 loginFormVisible: false,
+                repositories: [],
                 user: {
                     username: '',
                     password: '',
@@ -93,12 +123,19 @@
                 });
             },
         },
+        mounted() {
+            let user = github.getUser(GITHUB_USER);
+            user.listRepos({}).then((response) => {
+                this.repositories = response.data;
+            });
+        },
     };
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
     .navbar {
-        padding: 1px 16px;
+        color: #fff;
+        padding: 0 16px;
     }
 
     .navbar-brand {
@@ -108,5 +145,9 @@
             width: 48px;
             height: 48px;
         }
+    }
+
+    .el-menu {
+        border: 0;
     }
 </style>
