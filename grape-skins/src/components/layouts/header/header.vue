@@ -4,8 +4,8 @@
             <div class="navbar-header nav-title ">
                 <a class="navbar-brand" href="/">
                     <img src="../../../assets/images/logo/logo.png" class="img-brand"/>
+                    Grapes
                 </a>
-                Grapes
                 <button class="navbar-toggler" type="button"
                         data-toggle="collapse"
                         data-target="#collapseBar"
@@ -17,12 +17,10 @@
             </div>
             <div class="collapse navbar-collapse justify-content-end" id="collapseBar">
                 <el-menu
-                    default-active="-100"
                     mode="horizontal"
                     background-color="#1c2b36"
                     text-color="#c6cfd6"
                     active-text-color="#fff">
-
                     <el-menu-item index="-1">
                         <router-link to="/home">
                             <fa-icon :icon="['fas','home']" size="lg"/>
@@ -35,13 +33,52 @@
                             Blog
                         </router-link>
                     </el-menu-item>
-                    <el-submenu index="0">
+                    <el-submenu index="administration">
                         <template slot="title">
                             <fa-icon icon="user-plus" size="lg"/>
                             Administration
                         </template>
-                        <el-menu-item index="">
-                            Health
+                        <el-menu-item index="user-management">
+                            <router-link to="/user">
+                                <fa-icon icon="user" size="lg"/>
+                                User management
+                            </router-link>
+                        </el-menu-item>
+                        <el-menu-item index="admin-tracker">
+                            <router-link to="/admin-tracker">
+                                <fa-icon icon="eye" size="lg"/>
+                                User tracker
+                            </router-link>
+                        </el-menu-item>
+                        <el-menu-item index="admin-metrics">
+                            <router-link to="/admin-metrics">
+                                <fa-icon icon="tachometer-alt" size="lg"/>
+                                Metrics
+                            </router-link>
+                        </el-menu-item>
+                        <el-menu-item index="admin-health">
+                            <router-link to="/admin-health">
+                                <fa-icon icon="heartbeat" size="lg"/>
+                                Health
+                            </router-link>
+                        </el-menu-item>
+                        <el-menu-item index="admin-configuration">
+                            <router-link to="/admin-configuration">
+                                <fa-icon icon="list" size="lg"/>
+                                Configuration
+                            </router-link>
+                        </el-menu-item>
+                        <el-menu-item index="admin-audits">
+                            <router-link to="/admin-audits">
+                                <fa-icon icon="hand-point-up" size="lg"/>
+                                Audits
+                            </router-link>
+                        </el-menu-item>
+                        <el-menu-item index="admin-logs">
+                            <router-link to="/admin-logs">
+                                <fa-icon icon="bars" size="lg"/>
+                                Logs
+                            </router-link>
                         </el-menu-item>
                     </el-submenu>
 
@@ -149,6 +186,7 @@
     }
 
     .navbar-brand {
+        color: #fff;
         font-size: 1.6em;
         font-family: 'Pacifico', cursive;
         img {
@@ -159,5 +197,9 @@
 
     .el-menu {
         border: 0;
+        .el-menu-item a, a:hover {
+            color: inherit;
+        }
     }
+
 </style>
