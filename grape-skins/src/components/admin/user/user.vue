@@ -20,7 +20,7 @@
                 </el-table-column>
                 <el-table-column
                     prop="login"
-                    label="Login"
+                    label="Name"
                     width="180">
                 </el-table-column>
                 <el-table-column
@@ -35,7 +35,27 @@
                     </template>
                 </el-table-column>
 
+                <el-table-column label="Operation">
+                    <template slot-scope="scope">
+                        <el-button
+                            size="mini"
+                            @click="handleEdit(scope.$index, scope.row)">Edit
+                        </el-button>
+                        <el-button
+                            size="mini"
+                            type="danger"
+                            @click="handleDelete(scope.$index, scope.row)">Delete
+                        </el-button>
+                    </template>
+                </el-table-column>
             </el-table>
+            <div class="m-t-sm text-center">
+                <el-pagination
+                    background
+                    layout="prev, pager, next"
+                    :total="1">
+                </el-pagination>
+            </div>
         </div>
 
     </div>
@@ -59,7 +79,9 @@
             };
         },
         methods: {
-            login: function() {
+            handleEdit: function(index, row) {
+            },
+            handleDelete: function(index, row) {
             },
         },
 
