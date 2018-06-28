@@ -31,7 +31,7 @@ export const adminRouter = [
         path: '/user',
         name: 'user',
         component: () => import(
-            /* webpackChunkName: 'blog' */
+            /* webpackChunkName: 'user' */
             '@/components/admin/user/user'
             ),
     },

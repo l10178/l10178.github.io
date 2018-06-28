@@ -167,11 +167,11 @@
                 <div class="row stack-container">
                     <ul class="text-center stacks">
                         <li class="clip img-circle">
-                            <img src="../../assets/images/third/html-5.svg"/>
+                            <fa-icon :icon="['fab','html5']" class="ico-circle" style="color: #e44d26"/>
                             <span class="title-sub-tech">HTML5</span>
                         </li>
                         <li class="clip img-circle">
-                            <img src="../../assets/images/third/css-3.svg"/>
+                            <fa-icon :icon="['fab','css3-alt']" class="ico-circle text-info"/>
                             <span class="title-sub-tech">CSS3</span>
                         </li>
                         <li class="clip img-circle">
@@ -201,7 +201,7 @@
                         </li>
 
                         <li class="clip img-circle">
-                            <img src="../../assets/images/third/sass.svg" class="height"/>
+                            <fa-icon :icon="['fab','sass']" class="ico-circle" style="color: #cd6799"/>
                             <span class="title-sub-tech">Sass</span>
                         </li>
                         <li class="clip img-circle">
@@ -349,7 +349,7 @@
                 <div class="row stack-container">
                     <ul class="text-center stacks">
                         <li class="clip img-circle">
-                            <img src="../../assets/images/third/docker.svg"/>
+                            <fa-icon :icon="['fab','docker']" class="ico-circle text-info"/>
                             <span class="title-sub-tech">Docker</span>
                         </li>
                         <li class="clip img-circle">
@@ -365,7 +365,7 @@
                             <span class="title-sub-tech">CloudFoundry</span>
                         </li>
                         <li class="clip img-circle">
-                            <img src="../../assets/images/third/aws.svg" class="width"/>
+                            <fa-icon :icon="['fab','aws']" class="ico-circle" style="color: #335061"/>
                             <span class="title-sub-tech">AWS</span>
                         </li>
                         <li class="clip img-circle">
@@ -394,7 +394,7 @@
                 <div class="row stack-container">
                     <ul class="text-center stacks">
                         <li class="clip img-circle">
-                            <img src="../../assets/images/third/jenkins.svg"/>
+                            <fa-icon :icon="['fab','jenkins']" class="ico-circle" style="color: #335061"/>
                             <span class="title-sub-tech">Jenkins</span>
                         </li>
                         <li class="clip img-circle">
@@ -402,7 +402,8 @@
                             <span class="title-sub-tech">Travis CI</span>
                         </li>
                         <li class="clip img-circle">
-                            <img src="../../assets/images/third/gitlab.svg"/>
+                            <!--<img src="../../assets/images/third/gitlab.svg"/>-->
+                            <fa-icon :icon="['fab','gitlab']" class="ico-circle" style="color: #e24329"/>
                             <span class="title-sub-tech">Gitlab CI</span>
                         </li>
                         <li class="clip img-circle">
@@ -639,6 +640,10 @@
                 -webkit-border-radius: 500px;
                 -moz-border-radius: 500px;
                 border-radius: 500px;
+                .ico-circle {
+                    margin-top: 24px;
+                    font-size: 4em;
+                }
             }
             i {
                 display: block;

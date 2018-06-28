@@ -66,10 +66,37 @@ Unit tests can be run with:
     yarn test
 
 
+## Webpack Bundle Analyzer
+
+To analyz your application's JavaScript packages:
+
+    yarn analyz
+  
+Webpack Bundle Analyzer will start at http://127.0.0.1:8888
+
+
 ## Style Guide
 
 * Please read the [vue.js official style guide][] for Vue-specific code.
 * add the prefix `grp`.
+
+
+## Vue.js route lazy load
+
+In the route.js, import `component` as blow:
+
+```javascript 1.8
+    {
+        path: '/user',
+        name: 'user',
+        component: () => import(
+            /* webpackChunkName: 'user' */
+            '@/components/admin/user/user'
+            )
+    }
+```
+
+Learn more about webpack's `import`, please see [webpack document](https://webpack.js.org/api/module-methods/#import-).
 
 
 ## License
