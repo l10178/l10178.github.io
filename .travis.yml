@@ -1,0 +1,26 @@
+branches:
+  only:
+  - source
+cache:
+  apt: true
+  yarn: true
+  directories:
+    - node_modules
+before_install:
+- git config --global user.name "l10178"
+- git config --global user.email "l10178@163.com"
+# install yarn
+- curl -o- -L https://yarnpkg.com/install.sh | bash
+- export PATH=$HOME/.yarn/bin:$PATH
+install:
+# yarn install packages
+- cd ./grape-skins
+- yarn
+script:
+- yarn build
+after_success:
+- cd ./target/dist
+- git init
+- git add --all .
+- git commit -m "Travis CI Auto Builder"
+- git push --quiet --force https://$REPO_TOKEN@github.com/l10178/l10178.github.io.git master
