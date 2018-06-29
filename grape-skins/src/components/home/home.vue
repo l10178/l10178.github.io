@@ -147,7 +147,7 @@
                                 <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html"
                                    target="_blank">Java</a>,
                                 <a href="https://git-scm.com/" target="_blank">Git</a>,
-                                <a href="https://nodejs.org/" target="_blank">Node.js</a>,and
+                                <a href="https://nodejs.org/" target="_blank">Node.js</a> and
                                 <a href="https://yarnpkg.com/en/docs/install" target="_blank">Yarn</a>.
                             </small>
                         </p>
