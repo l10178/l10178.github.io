@@ -11,4 +11,4 @@ To run this locally
 Assuming you have already installed Git, Node.js,and Yarn.
 
 # update site
-By Travis CI.
+Auto build by Travis CI.
