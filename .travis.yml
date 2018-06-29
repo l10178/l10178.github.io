@@ -19,7 +19,7 @@ install:
 script:
 - yarn build
 after_success:
-- cp -rf ./*.md CNAME ./target/dist/
+- cp -rf ./*.md ./CNAME ./target/dist/
 - cd ./target/dist
 - git init
 - git add --all .
