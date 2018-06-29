@@ -5,8 +5,3 @@
 node_tmp/
 node_modules/
 npm-debug.log.*
-
-Gemfile.lock
-
-# jeklly build site
-_site
