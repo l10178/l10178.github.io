@@ -9,7 +9,7 @@ To run this locally
 2. Clone the `source` branch to your file system.
 3. Run the command below.
 
-  cd grape-skins && yarn && yarn start
+      cd grape-skins && yarn && yarn start
 
 4. You will be able to access the site at http://localhost:9000.
 
