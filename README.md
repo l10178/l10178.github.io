@@ -5,10 +5,13 @@ This is a Vue.js project. You can find at least two branches [here](https://gith
 
 
 To run this locally
-* Assuming you have already installed [Git][], [Node.js][] and [Yarn][].
-* Clone the `source` branch to your file system.
-* cd grape-skins && yarn && yarn start.
-* You will be able to access the site at http://localhost:9000
+1. Install [Git][], [Node.js][] and [Yarn][].
+2. Clone the `source` branch to your file system.
+3. Run the command below.
+
+  cd grape-skins && yarn && yarn start
+
+4. You will be able to access the site at http://localhost:9000.
 
 If you like the project, please give us a star on GitHub.
 
