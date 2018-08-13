@@ -1,9 +1,9 @@
 <template>
-    <div class="container-fluid m-lg">
+    <div class="container-fluid m-t-lg">
         <h2>
             <span>Users</span>
             <button class="btn btn-primary float-right m-r-lg">
-                <fa-icon icon="user"/>
+                <font-awesome-icon icon="user"/>
                 Create a new User
             </button>
         </h2>
@@ -13,6 +13,10 @@
                 :data="userList"
                 stripe
                 style="width: 100%">
+                <el-table-column
+                    type="selection"
+                    width="55">
+                </el-table-column>
                 <el-table-column
                     prop="id"
                     label="ID"

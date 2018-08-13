@@ -13,7 +13,7 @@
                     Copyright © <a href="http://nxest.com" target="_blank">nxest.com</a> 2018
                     | Become a Sponsor, click
                     <el-button type="text" @click="thanks">
-                        <fa-icon icon="coffee" size="lg"/>
+                        <font-awesome-icon icon="coffee" size="lg"/>
                     </el-button>
                 </el-footer>
             </el-container>

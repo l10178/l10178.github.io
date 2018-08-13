@@ -23,68 +23,69 @@
                     active-text-color="#fff">
                     <el-menu-item index="-1">
                         <router-link to="/home">
-                            <fa-icon :icon="['fas','home']" size="lg"/>
+                            <font-awesome-icon :icon="['fas','home']" size="lg"/>
                             Home
                         </router-link>
                     </el-menu-item>
                     <el-menu-item index="1">
                         <router-link to="/blog">
-                            <fa-icon :icon="['fas','rss']" size="lg"/>
+                            <font-awesome-icon :icon="['fas','rss']" size="lg"/>
                             Blog
                         </router-link>
                     </el-menu-item>
-                    <el-submenu index="administration">
+
+                    <el-submenu index="administration" v-if="false">
                         <template slot="title">
-                            <fa-icon icon="user-plus" size="lg"/>
+                            <font-awesome-icon icon="user-plus" size="lg"/>
                             Administration
                         </template>
                         <el-menu-item index="user-management">
                             <router-link to="/user">
-                                <fa-icon icon="user" size="lg"/>
+                                <font-awesome-icon icon="user" size="lg"/>
                                 User management
                             </router-link>
                         </el-menu-item>
                         <el-menu-item index="admin-tracker">
                             <router-link to="/admin-tracker">
-                                <fa-icon icon="eye" size="lg"/>
+                                <font-awesome-icon icon="eye" size="lg"/>
                                 User tracker
                             </router-link>
                         </el-menu-item>
                         <el-menu-item index="admin-metrics">
                             <router-link to="/admin-metrics">
-                                <fa-icon icon="tachometer-alt" size="lg"/>
+                                <font-awesome-icon icon="tachometer-alt" size="lg"/>
                                 Metrics
                             </router-link>
                         </el-menu-item>
                         <el-menu-item index="admin-health">
                             <router-link to="/admin-health">
-                                <fa-icon icon="heartbeat" size="lg"/>
+                                <font-awesome-icon icon="heartbeat" size="lg"/>
                                 Health
                             </router-link>
                         </el-menu-item>
                         <el-menu-item index="admin-configuration">
                             <router-link to="/admin-configuration">
-                                <fa-icon icon="list" size="lg"/>
+                                <font-awesome-icon icon="list" size="lg"/>
                                 Configuration
                             </router-link>
                         </el-menu-item>
                         <el-menu-item index="admin-audits">
                             <router-link to="/admin-audits">
-                                <fa-icon icon="hand-point-up" size="lg"/>
+                                <font-awesome-icon icon="hand-point-up" size="lg"/>
                                 Audits
                             </router-link>
                         </el-menu-item>
                         <el-menu-item index="admin-logs">
                             <router-link to="/admin-logs">
-                                <fa-icon icon="bars" size="lg"/>
+                                <font-awesome-icon icon="bars" size="lg"/>
                                 Logs
                             </router-link>
                         </el-menu-item>
                     </el-submenu>
 
-                    <el-submenu index="3">
+                    <el-submenu index="3" v-if="false">
                         <template slot="title">
-                            <fa-icon icon="user-circle" size="lg"/>
+                            <font-awesome-icon icon="user-circle" size="lg"/>
                             Account
                         </template>
                         <el-menu-item index="3-1">
@@ -102,7 +103,7 @@
                     </el-submenu>
                     <el-submenu index="i-github">
                         <template slot="title">
-                            <fa-icon :icon="['fab','github']" size="2x"/>
+                            <font-awesome-icon :icon="['fab','github']" size="2x"/>
                         </template>
                         <el-menu-item v-for="repository in repositories" :key="repository.id" :index="repository.name">
                             <!--suppress JSUnresolvedVariable -->
@@ -142,7 +143,7 @@
     import {GITHUB_API_TKKEEN, GITHUB_USER} from '../../../constants';
 
     let github = new GitHub({
-        username: GITHUB_API_TKKEEN.replace('2018', '1201'),
+        username: GITHUB_API_TKKEEN.replace('2018', '1504'),
     });
     const loginUrl = '/api/authenticate';
     export default {

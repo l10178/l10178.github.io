@@ -15,7 +15,7 @@
                                     <a href="https://github.com/l10178/grapes" target="_blank">
                                         <div class="card dark summary-inline">
                                             <div class="card-body">
-                                                <fa-icon icon="download" size="3x"></fa-icon>
+                                                <font-awesome-icon icon="download" size="3x"></font-awesome-icon>
                                                 <div class="content">
                                                     <div class="title">{{npmDownloads}}</div>
                                                     <div class="sub-title">Downloads in last 30 days</div>
@@ -29,7 +29,7 @@
                                     <a href="https://github.com/l10178/grapes" target="_blank">
                                         <div class="card dark summary-inline">
                                             <div class="card-body">
-                                                <fa-icon icon="star" size="3x"></fa-icon>
+                                                <font-awesome-icon icon="star" size="3x"></font-awesome-icon>
                                                 <div class="content">
                                                     <div class="title">{{stars}}</div>
                                                     <div class="sub-title">Stars</div>
@@ -43,7 +43,7 @@
                                     <a href="https://github.com/l10178/grapes/contributors" target="_blank">
                                         <div class="card dark summary-inline">
                                             <div class="card-body">
-                                                <fa-icon icon="user" size="3x"></fa-icon>
+                                                <font-awesome-icon icon="user" size="3x"></font-awesome-icon>
                                                 <div class="content">
                                                     <div class="title">{{contributors}}</div>
                                                     <div class="sub-title">Contributors</div>
@@ -167,11 +167,11 @@
                 <div class="row stack-container">
                     <ul class="text-center stacks">
                         <li class="clip img-circle">
-                            <fa-icon :icon="['fab','html5']" class="ico-circle" style="color: #e44d26"/>
+                            <font-awesome-icon :icon="['fab','html5']" class="ico-circle" style="color: #e44d26"/>
                             <span class="title-sub-tech">HTML5</span>
                         </li>
                         <li class="clip img-circle">
-                            <fa-icon :icon="['fab','css3-alt']" class="ico-circle text-info"/>
+                            <font-awesome-icon :icon="['fab','css3-alt']" class="ico-circle text-info"/>
                             <span class="title-sub-tech">CSS3</span>
                         </li>
                         <li class="clip img-circle">
@@ -201,7 +201,7 @@
                         </li>
 
                         <li class="clip img-circle">
-                            <fa-icon :icon="['fab','sass']" class="ico-circle" style="color: #cd6799"/>
+                            <font-awesome-icon :icon="['fab','sass']" class="ico-circle" style="color: #cd6799"/>
                             <span class="title-sub-tech">Sass</span>
                         </li>
                         <li class="clip img-circle">
@@ -349,7 +349,7 @@
                 <div class="row stack-container">
                     <ul class="text-center stacks">
                         <li class="clip img-circle">
-                            <fa-icon :icon="['fab','docker']" class="ico-circle text-info"/>
+                            <font-awesome-icon :icon="['fab','docker']" class="ico-circle text-info"/>
                             <span class="title-sub-tech">Docker</span>
                         </li>
                         <li class="clip img-circle">
@@ -365,7 +365,7 @@
                             <span class="title-sub-tech">CloudFoundry</span>
                         </li>
                         <li class="clip img-circle">
-                            <fa-icon :icon="['fab','aws']" class="ico-circle" style="color: #335061"/>
+                            <font-awesome-icon :icon="['fab','aws']" class="ico-circle" style="color: #335061"/>
                             <span class="title-sub-tech">AWS</span>
                         </li>
                         <li class="clip img-circle">
@@ -394,7 +394,7 @@
                 <div class="row stack-container">
                     <ul class="text-center stacks">
                         <li class="clip img-circle">
-                            <fa-icon :icon="['fab','jenkins']" class="ico-circle" style="color: #335061"/>
+                            <font-awesome-icon :icon="['fab','jenkins']" class="ico-circle" style="color: #335061"/>
                             <span class="title-sub-tech">Jenkins</span>
                         </li>
                         <li class="clip img-circle">
@@ -403,7 +403,7 @@
                         </li>
                         <li class="clip img-circle">
                             <!--<img src="../../assets/images/third/gitlab.svg"/>-->
-                            <fa-icon :icon="['fab','gitlab']" class="ico-circle" style="color: #e24329"/>
+                            <font-awesome-icon :icon="['fab','gitlab']" class="ico-circle" style="color: #e24329"/>
                             <span class="title-sub-tech">Gitlab CI</span>
                         </li>
                         <li class="clip img-circle">
