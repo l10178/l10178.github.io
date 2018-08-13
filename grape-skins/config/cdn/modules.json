@@ -167,7 +167,7 @@
         }
     },
     "vue-ls": {
-        "var": "Storage",
+        "var": "VueStorage",
         "versions": {
             ">= 2.0.0": {
                 "development": "https://unpkg.com/vue-ls@[version]/dist/vue-ls.js",

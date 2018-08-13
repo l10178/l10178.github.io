@@ -15,7 +15,7 @@ import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min';
-import Storage from 'vue-ls';
+import VueStorage from 'vue-ls';
 import app from './app';
 import router from './router';
 import '@/assets/styles/index.scss';
@@ -36,8 +36,8 @@ let localStorage = {
     storage: 'local',
 };
 
-Vue.use(_.clone(Storage), sessionStorage);
-Vue.use(_.clone(Storage), localStorage);
+Vue.use(_.clone(VueStorage), sessionStorage);
+Vue.use(_.clone(VueStorage), localStorage);
 
 /**
  * read token from storage
