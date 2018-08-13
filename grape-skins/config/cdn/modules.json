@@ -175,6 +175,15 @@
             }
         }
     },
+    "element-ui": {
+        "var": "ELEMENT",
+        "versions": {
+            ">= 2.0.0": {
+                "development": "https://unpkg.com/element-ui@[version]/lib/index.js",
+                "production": "https://unpkg.com/element-ui@[version]/lib/index.js"
+            }
+        }
+    },
     "angular": {
         "var": "angular",
         "versions": {
