@@ -5,7 +5,7 @@ import axios from 'axios';
 import _ from 'lodash/lang';
 import VueAxios from 'vue-axios';
 import ElementUI from 'element-ui';
-import 'typeface-pacifico/index.css';
+
 import 'element-ui/lib/theme-chalk/index.css';
 import {library} from '@fortawesome/fontawesome-svg-core';
 import {fas} from '@fortawesome/free-solid-svg-icons';
@@ -13,8 +13,8 @@ import {fas} from '@fortawesome/free-solid-svg-icons';
 import {fab} from '@fortawesome/free-brands-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap';
 import VueStorage from 'vue-ls';
 import app from './app';
 import router from './router';

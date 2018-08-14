@@ -11,7 +11,7 @@
         "e2e": "node test/e2e/runner.js",
         "test": "yarn run unit && yarn run e2e",
         "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
-        "analyz": "NODE_ENV=production yarn_config_report=true yarn run build",
+        "analyz": "set NODE_ENV=production && set yarn_config_report=true && yarn run build",
         "build": "node build/build.js"
     },
     "dependencies": {
@@ -75,7 +75,6 @@
         "imagemin-webpack": "3.0.0",
         "jest": "^22.0.4",
         "jest-serializer-vue": "^0.3.0",
-        "module-to-cdn": "^3.1.2",
         "nightwatch": "^0.9.12",
         "node-notifier": "^5.1.2",
         "node-sass": "^4.8.3",

@@ -420,6 +420,7 @@
 </template>
 
 <script>
+    import 'typeface-pacifico/index.css';
     export default {
         name: 'GrpHome',
         data() {
