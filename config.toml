@@ -1,8 +1,7 @@
 baseURL = "https://l10178.github.io/"
-languageCode = "zh-CN"
+languageCode = "zh-cn"
 title = "Oh my little jelly bean"
 theme = "hugo-elate-theme"
-
 
 [params]
   
@@ -10,11 +9,12 @@ theme = "hugo-elate-theme"
 
   # Meta
   author = "l10178"
-  description = "Oh my little jelly bean"
+  description = "l10178 IT blogs, for kubernetes, cloud native, quarkus, goland and so on."
+  keywords = "blog,idaas,kubernetes, cloud native, quarkus, goland"
   email = ""
 
   # Google Maps Javascript API Key (if not set will default to not passing a key)
-  googleMapsApiKey = ""
+  # googleMapsApiKey = ""
 
   # Navigation
   [params.navigation]
@@ -60,7 +60,7 @@ theme = "hugo-elate-theme"
 
   [[params.intro.item]]
     title = "Bits & Pieces"
-    description = "I always have a lot of bits and pieces in my coat pocket. 只是些日常琐碎笔记，目前看并没什么大用。"
+    description = "I always have a lot of bits and pieces in my coat pocket. 只是些日常琐碎笔记，目前看并没什么大用，翻翻还是有惊喜。"
     url = "/bits-pieces"
     button = "Click Me"
     icon = "icon-wrench"
@@ -68,7 +68,7 @@ theme = "hugo-elate-theme"
 
   [[params.intro.item]]
     title = "GitHub"
-    description = "My github home, welcome to my warehouse. 交个朋友，可以在这里找到更多关于个人的开源项目"
+    description = "My github home, welcome to my warehouse. 交个朋友，可以在这里找到更多我个人的开源项目。"
     url = "https://github.com/l10178"
     button = "Give me a star"
     icon = "icon-github"
