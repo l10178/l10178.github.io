@@ -1215,7 +1215,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #footer .gotop {
   position: absolute;
-  top: -20px;
+  top: -30px;
   left: 50%;
   margin-left: -40px;
   background: #fff;
