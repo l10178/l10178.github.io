@@ -7,10 +7,10 @@ theme = "hugo-elate-theme"
   
   # custom_css = ["css/custom1.css", "css/custom2.css"]
 
-  # Meta
+  # Meta 
   author = "l10178"
   description = "l10178 IT blogs, for kubernetes, cloud native, quarkus, goland and so on."
-  keywords = "blog,idaas,kubernetes, cloud native, quarkus, goland"
+  keywords = "blog, idaas, kubernetes, cloud native, quarkus, goland"
   email = ""
 
   # Google Maps Javascript API Key (if not set will default to not passing a key)
@@ -62,7 +62,7 @@ theme = "hugo-elate-theme"
     title = "Bits & Pieces"
     description = "I always have a lot of bits and pieces in my coat pocket. 只是些日常琐碎笔记，目前看并没什么大用，翻翻还是有惊喜。"
     url = "/bits-pieces"
-    button = "Click Me"
+    button = "Take A Look"
     icon = "icon-wrench"
     # img = "img_8.jpg"
 
@@ -70,7 +70,7 @@ theme = "hugo-elate-theme"
     title = "GitHub"
     description = "My github home, welcome to my warehouse. 交个朋友，可以在这里找到更多我个人的开源项目。"
     url = "https://github.com/l10178"
-    button = "Give me a star"
+    button = "Give Me A Star"
     icon = "icon-github"
     # img = "img_10.jpg"
 
@@ -259,7 +259,7 @@ theme = "hugo-elate-theme"
   # Footer section
   [params.footer]
     enable = true
-    copyright = '&copy; nxest.com. All Rights Reserved.'
+    copyright = '**&copy; nxest.com** all rights reserved. 备案许可证号：[京ICP备20025931号](https://beian.miit.gov.cn)'
     links = [
         ["icon-github", "https://github.com/l10178"]
       ]
