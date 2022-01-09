@@ -2,10 +2,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title> {{ .Title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--     <meta name="description" content="Free HTML5 Template by FREEHTML5.CO - Hugo port by Pieter Saey" />
-    <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive, hugo, static site" />
-    <meta name="author" content="FREEHTML5.CO / Hugo port " />
- -->
     {{ with .Site.Params.author }}
     <meta name="author" content="{{ . }}">{{ end }}
     {{ with .Site.Params.description }}
@@ -13,8 +9,7 @@
     {{ with .Site.Params.keywords }}
     <meta name="keywords" content="{{ . }}">{{ end }}
     {{ with .Site.LanguageCode }}
-    <meta http-equiv="content-language" content="{{ . }}" />{{ end }}
-
+    <meta http-equiv="content-language" content="{{ . }}">{{ end }}
     <!-- 
     //////////////////////////////////////////////////////
 
@@ -66,8 +61,8 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="shortcut icon" href="favicon.ico">
 
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet'
-       type='text/css'>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet'
+       type='text/css'> -->
 
     <link rel="stylesheet" href="css/leaflet.css" />
 
