@@ -1,17 +1,13 @@
-######################
-## Hugo
-#######################
-public/
+.eslintcache
+.stylelintcache
+.netlify
 .hugo_build.lock
+yarn-error.log
+node_modules/
+public
+resources
+pnpm-lock.yaml
 
-######################
-## Intellij
-#######################
-.idea/
-*.iml
-
-#######################
-## Visual Studio Code
-#######################
-.vscode/
-.gradle/
+.idea
+.vscode
+.impl
